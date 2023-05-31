@@ -41,7 +41,8 @@ body{
     display: block;
 }
 ul{
-  display:inline-block;
+  display:flex;
+  flex-direction: wrap;
 
 }
 li{
@@ -59,8 +60,9 @@ footer {
     text-align:center;
     padding:5px;
     width: 100%;
-    position:unset;
-    bottom: auto;
+    position:relative;
+    bottom:0%;
+    margin-top: 190px;
   }
   .footer-basic  > a {
     font-size:24px;

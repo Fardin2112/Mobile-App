@@ -1,3 +1,4 @@
+// firebase connecting
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js"
 import { getDatabase, ref, push, onValue } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js"
 
@@ -9,6 +10,7 @@ const app = initializeApp(appSettings)
 const database = getDatabase(app)
 const shoppingListInDB = ref(database, "shoppingList")
 
+// App
 const inputFieldEl = document.getElementById("input-el")
 const addButtonEl = document.getElementById("add-el")
 const shoppingListEl = document.getElementById("ul-el")
@@ -20,7 +22,7 @@ addButtonEl.addEventListener("click", function() {
     
     clearInputFieldEl()
 })
-
+// to fetch data from firebase
 onValue(shoppingListInDB, function(snapshot) {
     let itemsArray = Object.values(snapshot.val())
     
