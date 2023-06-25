@@ -4,6 +4,7 @@ body{
     font-family: 'Rubik', sans-serif;
     background-color: #EEF0F4;
     min-height: 100vh;
+    user-select: none;
 }  
 .container{
     display: flex;
@@ -36,6 +37,10 @@ body{
     font-size: 20px;
     text-align: center;
     font-family: 'Rubik', sans-serif; 
+    cursor: pointer;
+}
+#add-el:hover{
+  background-color:green;
 }
 #list-el{
     display: block;
